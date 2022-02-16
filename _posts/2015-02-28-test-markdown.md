@@ -30,47 +30,12 @@ It can also be centered!
 
 ![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
 
-Here's a code chunk:
+##계정 정보 삭제하기
+
+<img width="989" alt="image" src="https://user-images.githubusercontent.com/96413107/154204002-2fea7b2b-8a07-40bb-b42a-92596a9ce679.png">
 
 ~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
+$ git credential-osxkeychain erase
+host=github.com
+protocol=https
 ~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
