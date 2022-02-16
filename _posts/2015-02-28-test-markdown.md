@@ -39,3 +39,19 @@ $ git credential-osxkeychain erase
 host=github.com
 protocol=https
 ~~~
+
+NOTE: after you enter “protocol=https” above you need to press ~~RETURN~~ TWICE (Each '⏎' is equivalent to a 'press enter/return' )
+
+그런데 저 연필로 되어있는 거는 
+
+안 지어져서 손으로 다 삭제함
+<img width="874" alt="image" src="https://user-images.githubusercontent.com/96413107/154205254-f4702417-32d5-49c4-9891-63ef6f82e3e6.png">
+
+
+
+참고
+https://stackoverflow.com/questions/11067818/how-do-you-reset-the-stored-credentials-in-git-credential-osxkeychain
+##깃허브 데스크탑 리파지토리 해제하기
+<img width="956" alt="image" src="https://user-images.githubusercontent.com/96413107/154204940-1b75c9f7-a849-4a38-bb90-5994498863a8.png">
+click! "remove"
+<img width="956" alt="image" src="https://user-images.githubusercontent.com/96413107/154205017-c2b8a72e-fff0-4159-bc5b-84ec52ebe2ce.png">
