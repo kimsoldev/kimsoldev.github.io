@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://kimsoldev.github.io//jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kimsoldev.github.io//jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2022-08-15T23:42:14+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/feed.xml</id><title type="html">1만 시간 중 오늘 한 시간</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Sol Kim</name></author><entry><title type="html">해커스 페이지 효과음</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/2022/07/13/%ED%95%B4%EC%BB%A4%EC%8A%A4-%ED%8E%98%EC%9D%B4%EC%A7%80-%ED%9A%A8%EA%B3%BC%EC%9D%8C.html" rel="alternate" type="text/html" title="해커스 페이지 효과음" /><published>2022-07-13T00:00:00+00:00</published><updated>2022-07-13T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/2022/07/13/%ED%95%B4%EC%BB%A4%EC%8A%A4-%ED%8E%98%EC%9D%B4%EC%A7%80-%ED%9A%A8%EA%B3%BC%EC%9D%8C</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/2022/07/13/%ED%95%B4%EC%BB%A4%EC%8A%A4-%ED%8E%98%EC%9D%B4%EC%A7%80-%ED%9A%A8%EA%B3%BC%EC%9D%8C.html"><![CDATA[<h1 id="해커스-강의창-효과음">해커스 강의창 효과음</h1>
+<p>Cancel changes</p>
+<h2 id="관심">관심</h2>
+
+<p>토익 강의를 듣는 중인데 페이지를 로드할 때마다 아주 귀여운 효과음이 자동으로 재생된다. 뾰로롱-
+어떻게 구현했는지 궁금해졌다.</p>
+<audio controls="">
+<source src="https://class.champstudy.com/HLec/sound/s1.mp3" type="audio/mp3" />
+</audio>
+
+<pre><code class="language-HTML">&lt;div id="effect_player" style="width: 0px; height: 0px;"&gt;
+    &lt;img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"&gt;
+    &lt;audio id="jp_audio_0" preload="metadata" src="https://class.champstudy.com/HLec/sound/s1.mp3"&gt;
+    &lt;/audio&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="분석">분석</h2>
+<p>안 보이도록 display:none;으로 숨겨주었다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">audio</code> 태그에 <code class="language-plaintext highlighter-rouge">preload</code> 속성을 지정하였다.
+저자는 페이지가 로드될 때 브라우저가 메타데이터(metadata)만 로드해야 된다고 생각함.</p>
+
+<p>###preload=”metadata”란
+The <code class="language-plaintext highlighter-rouge">preload</code> attribute specifies if and how the author thinks that the audio file should be loaded when the page loads.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">preload</code> attribute allows the author to provide a hint to the browser about what he/she thinks will lead to the best user experience. This attribute may be ignored in some instances.</p>
+
+<p>Note: The preload attribute is ignored if <code class="language-plaintext highlighter-rouge">autoplay</code> is present.</p>
+
+<h3 id="메타데이터란">메타데이터란</h3>
+<p>메타데이터란 데이터에 관한 구조화된 데이터로, 다른 데이터를 설명해 주는 데이터를 의미함.
+사용자는 메타데이터를 이용하여 자기가 원하는 특정 데이터(정보)를 검색엔진 등으로 쉽게 찾아낼 수 있다. 전자의 경우에서나 후자의 경우에 메타데이터는 데이터를 사용하는 사람에게는 보이지 않는다. 그러나 기계(컴퓨터)는 메타데이터의 내용을 이해하고 이를 이용한다. 곧, 웹 자료나 다른 것들에 관해 기계가 이해할 수 있는 정보가 메타데이터인 것이다.</p>
+
+<h2 id="참고">참고</h2>
+<p>https://www.w3schools.com/tags/att_audio_preload.asp</p>
+<audio> 태그의 preload 속성
+https://terms.naver.com/entry.naver?docId=1224192&amp;cid=40942&amp;categoryId=32840
+메타데이터
+</audio>]]></content><author><name>Sol Kim</name></author><summary type="html"><![CDATA[해커스 강의창 효과음 Cancel changes 관심 토익 강의를 듣는 중인데 페이지를 로드할 때마다 아주 귀여운 효과음이 자동으로 재생된다. 뾰로롱- 어떻게 구현했는지 궁금해졌다. &lt;div id="effect_player" style="width: 0px; height: 0px;"&gt; &lt;img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"&gt; &lt;audio id="jp_audio_0" preload="metadata" src="https://class.champstudy.com/HLec/sound/s1.mp3"&gt; &lt;/audio&gt; &lt;/div&gt; 분석 안 보이도록 display:none;으로 숨겨주었다. audio 태그에 preload 속성을 지정하였다. 저자는 페이지가 로드될 때 브라우저가 메타데이터(metadata)만 로드해야 된다고 생각함. ###preload=”metadata”란 The preload attribute specifies if and how the author thinks that the audio file should be loaded when the page loads. The preload attribute allows the author to provide a hint to the browser about what he/she thinks will lead to the best user experience. This attribute may be ignored in some instances. Note: The preload attribute is ignored if autoplay is present. 메타데이터란 메타데이터란 데이터에 관한 구조화된 데이터로, 다른 데이터를 설명해 주는 데이터를 의미함. 사용자는 메타데이터를 이용하여 자기가 원하는 특정 데이터(정보)를 검색엔진 등으로 쉽게 찾아낼 수 있다. 전자의 경우에서나 후자의 경우에 메타데이터는 데이터를 사용하는 사람에게는 보이지 않는다. 그러나 기계(컴퓨터)는 메타데이터의 내용을 이해하고 이를 이용한다. 곧, 웹 자료나 다른 것들에 관해 기계가 이해할 수 있는 정보가 메타데이터인 것이다. 참고 https://www.w3schools.com/tags/att_audio_preload.asp 태그의 preload 속성 https://terms.naver.com/entry.naver?docId=1224192&amp;cid=40942&amp;categoryId=32840 메타데이터]]></summary></entry><entry><title type="html">React Router</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/2022/05/23/React-Router.html" rel="alternate" type="text/html" title="React Router" /><published>2022-05-23T00:00:00+00:00</published><updated>2022-05-23T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/2022/05/23/React-Router</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/2022/05/23/React-Router.html"><![CDATA[<h1 id="routing-configuration라우팅-설정">routing configuration라우팅 설정</h1>
+
+<p>앱을 내비게이션할 때 사용자는 다음과 같은 기대를 한다.</p>
+
+<p>1.주소 표시줄에 보이는 URL 이 항상 현재 보고 있는 화면URL이기를 원한다.
+2.브라우저의 이전 버튼과 다음 버튼을 사용할 수 있기를 원한다.
+3.적합한 URL을 사용해 특정 뷰(딥 링크DEEP LINK)를 바로 보기를 원한다.</p>
+
+<p>멀티 페이지 앱에서 위 세가지는 공짜로 얻어진다.
+그러나 리액트와 같은 싱글 페이지 앱에서는 페이지를 새로 로딩하지 않기 때문에 3가지 사항을 직접 구현해야 한다.</p>
+
+<p>이 모든 걸 처리하기 위해서는 이른바 라우팅이라고 하는 기법을 사용해야 한다. 라우팅은 URL을 물리적인 페이지가 아닌, 싱글 페이지 앱에서의 개별 뷰와 매핑하는 기법이다. 자바스크립트 라이브러리 React Router는 라우팅 기능을 사용할 수 있게 해준다.</p>
+
+<p>라우팅 설정은 URL과 뷰 사이의 매핑을 기술할 때 사용하는 용어이다.</p>]]></content><author><name>Sol Kim</name></author><summary type="html"><![CDATA[routing configuration라우팅 설정 앱을 내비게이션할 때 사용자는 다음과 같은 기대를 한다. 1.주소 표시줄에 보이는 URL 이 항상 현재 보고 있는 화면URL이기를 원한다. 2.브라우저의 이전 버튼과 다음 버튼을 사용할 수 있기를 원한다. 3.적합한 URL을 사용해 특정 뷰(딥 링크DEEP LINK)를 바로 보기를 원한다. 멀티 페이지 앱에서 위 세가지는 공짜로 얻어진다. 그러나 리액트와 같은 싱글 페이지 앱에서는 페이지를 새로 로딩하지 않기 때문에 3가지 사항을 직접 구현해야 한다. 이 모든 걸 처리하기 위해서는 이른바 라우팅이라고 하는 기법을 사용해야 한다. 라우팅은 URL을 물리적인 페이지가 아닌, 싱글 페이지 앱에서의 개별 뷰와 매핑하는 기법이다. 자바스크립트 라이브러리 React Router는 라우팅 기능을 사용할 수 있게 해준다. 라우팅 설정은 URL과 뷰 사이의 매핑을 기술할 때 사용하는 용어이다.]]></summary></entry><entry><title type="html">React Props&amp;amp;state</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/2022/03/11/REACT-props&state.html" rel="alternate" type="text/html" title="React Props&amp;amp;state" /><published>2022-03-11T00:00:00+00:00</published><updated>2022-03-11T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/2022/03/11/REACT-props&amp;state</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/2022/03/11/REACT-props&amp;state.html"><![CDATA[<p>#1. REACT PROPS
+간단하게 컴포넌트에서 컴포넌트로 전달하는 데이터를 말한다. 함수를 매개변수를 이용해서 효율적으로 재사용할 수 있는 것 처럼 컴포넌트의 .PROPS도 컴포넌트를 효율적으로 재사용할 수 있게 해준다. 
+PROPS에 있는 데이터는 문자열인 경우를 제외하면 모두 중괄호{ }로 값을 감싸야 한다는 점.</p>
+
+<p>#2. state와 클래형 컴포넌트
+###특징
+동적 데이터(말 그대로 변경될 가능성이 있는 데이터)를 다룰 때 사용한다. 객체를 예로 들면 객체의 구성 요소 중 일부가 있다가 없을 수도 있고, 구성 요소가 하나였다가 둘이 될 수도 있다. props는 그런 데이터를 다루지 못한다. 그래서 state를 쓴다. state는 클래스형 컴포넌트에서 사용할 수 있는 개념으로 클래스형 컴포넌트를 공부해야한다.</p>
+
+<p>#####함수형 컴포넌트는 return문이 JSX를 반환한다. 하지만 클래스형 컴포넌트는 render()함수가 jsx를 반환한다. 
+그리고 리액트는 클래스형 컴포넌트의 render()함수를 자동으로 실행시켜 준다. 
+<a href="http://https://ko.javascript.info/class#ref-739">STATE를 쓰는 이유 CONST나 LET을 쓰지 않고</a>
+state는 객체 형태의 데이터야 반드시 클래스형 컴포넌트 안에서, 소문자로 적는다.</p>
+
+<p>#3. 알아야하는 생명주기 함수</p>
+
+<p>###Mount마운트로 분류하는   MJJJJJKKKKK<br />
+render()
+constructor()
+constructor()</p>
+
+<p>###Update업데이트로 분류한 생명주기 함수
+componentDidUpdate()</p>
+
+<p>###Unmount언마운트로 분류한 생명주기
+componentWillUnmount()</p>]]></content><author><name>Sol Kim</name></author><summary type="html"><![CDATA[#1. REACT PROPS 간단하게 컴포넌트에서 컴포넌트로 전달하는 데이터를 말한다. 함수를 매개변수를 이용해서 효율적으로 재사용할 수 있는 것 처럼 컴포넌트의 .PROPS도 컴포넌트를 효율적으로 재사용할 수 있게 해준다. PROPS에 있는 데이터는 문자열인 경우를 제외하면 모두 중괄호{ }로 값을 감싸야 한다는 점. #2. state와 클래형 컴포넌트 ###특징 동적 데이터(말 그대로 변경될 가능성이 있는 데이터)를 다룰 때 사용한다. 객체를 예로 들면 객체의 구성 요소 중 일부가 있다가 없을 수도 있고, 구성 요소가 하나였다가 둘이 될 수도 있다. props는 그런 데이터를 다루지 못한다. 그래서 state를 쓴다. state는 클래스형 컴포넌트에서 사용할 수 있는 개념으로 클래스형 컴포넌트를 공부해야한다. #####함수형 컴포넌트는 return문이 JSX를 반환한다. 하지만 클래스형 컴포넌트는 render()함수가 jsx를 반환한다. 그리고 리액트는 클래스형 컴포넌트의 render()함수를 자동으로 실행시켜 준다. STATE를 쓰는 이유 CONST나 LET을 쓰지 않고 state는 객체 형태의 데이터야 반드시 클래스형 컴포넌트 안에서, 소문자로 적는다. #3. 알아야하는 생명주기 함수 ###Mount마운트로 분류하는 MJJJJJKKKKK render() constructor() constructor() ###Update업데이트로 분류한 생명주기 함수 componentDidUpdate() ###Unmount언마운트로 분류한 생명주기 componentWillUnmount()]]></summary></entry><entry><title type="html">React Mvc&amp;amp;dom</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/2022/02/14/React-MVC&DOM.html" rel="alternate" type="text/html" title="React Mvc&amp;amp;dom" /><published>2022-02-14T00:00:00+00:00</published><updated>2022-02-14T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/2022/02/14/React-MVC&amp;DOM</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/2022/02/14/React-MVC&amp;DOM.html"><![CDATA[<h1 id="react-소개">REACT 소개</h1>
+<p>###MVC 아키텍처에서의 ‘V’
+ 리액트는 앱 개발의 모든 사항을 완전히 책임져주는 프레임워크가 아니다. 그 대신 리액트는 비주얼한 요소와 그 상태를 최신으로 유지하는 데 중점을 두는 뷰VIEW 레이어에서 작동한다. 이는 MVC 아키텍처에서 M과 C에 해당하는 부분은 무엇이든 원하는 대로 자유롭게 사용할 수 있다는 의미다. 이런 유연성 덕분에 이미 익숙한 어떤 기술이든 채택할 수 있으며, 또한 새로운 웹앱 개발뿐만 아니라 엄청난 코드 수정 없이도 기존 앱을 개선하는 데 리액트가 유용할 수 있다.</p>
+
+<p>###번개같이 바른 DOM 조작
+ DOM은 정말 느리기 때문에 리액트를 사용할 때 직접 DOM을 조작하지 않는다. 그 대신 리액트는 메모리상의, 즉 인메미로 가상 DOM(IN-MEMORY VIRTURAL DOM)을 만들어 조작한다.</p>
+
+<hr />
+
+<p>#리액트 시작하기 1.JSX 다루기
+ 리액트는 우리가 써봤을 다른 자바스크립트 라이브러리와는 다르다. 스크립트 태그에서 코드를 작성하고 참조해야하는 건 즐거운 일이 아니지만 리액트는 그런 방법을 채용했다.
+ 웹앱을 리액트로 만들든, AngularJS나 KnockOUT, jQuery 등으로 만들든 관계없다.
+<strong>최종 결과가 반드시 HTML, CSS JS의 조합이어야 한다는 점이 중요하다.</strong>
+그렇지 않으면 브라우저는 뭘 해야 하는지 알지 못하기 때문이다.
+jsx를 사용하면 쉽게 js와 html 태그를 합쳐 사용자 인터페이스의 요소와 기능을 정의할 수 있다. 그러나 미묘한 문제가 하나 있다.
+<strong>브라우저가 JSX에 대해 모른다는 사실이다.</strong>
+리액트를 사용해 웹앱을 만들 때는 JSX를 브라우저가 이해할 수 있는 평범한 자바스크립트로 변환시킬 방법이 필요하다.
+그 방법으로</p>
+<ol>
+  <li>노드와 그 외 빌드 툴 등으로 구성된 개발 환경을 구축한다. 이 경우, 빌드를 수행할 대마다 JSX의 모든 사항이 자동으로 JS로 변환되며, 다른 일반적인 JS 파일처럼 참조할 수 있도록 파일이 디스크에 저장된다.</li>
+  <li>JSX를 자동 변환하는 JS라이브러리를 사용한다. 이 경우 다른 자바스크립트의 경우처럼 JSX를 직접 지정하면 되고, 나머지는 브라우저가 알아서 처리한다.</li>
+</ol>
+
+<p>###요약
+리액트는 JSX라는 새로운 언어를 사용해 비주얼을 정의한다는 측면에서 다른 라이브러리와 차별된다.</p>
+
+<p>#리액트 컴포넌트
+##함수</p>
+
+<p>개념적으로 자바스크립 함수는 리액트 컴포넌트와 많은부분을 표면적으로 공유하며, 또한 컴포넌트가 어떤 일을 하는지 가장 수베기 이해할 수 있는 방법이다. 함수는 코드를 더 명확하고 재사용 가능하도록 만든다.
+함수와 마찬가지로 컴포넌트에도 인자를 전달해 그에 맞게 동작하도록 할 수 있다.용어가 약간 다른데, 함수 세계에서 인자라고 불렀던 것을 컴포넌트 세계에서는 속성 property라고 한다.</p>
+
+<p>#리액트 스타일링</p>
+
+<p>리액트의 핵심아이디어 중 하나는  앱의 비주얼 부품은 독립적이며 재사용 가능해야 한다는 점이다. 그게 html 엘리먼트와 자바스크립트를 컴포넌트라는 한 통에 담았던 이유이다.독립적인 ui 컴포넌트가 되기 위해 리액트는 html과 자바스크립트 바로 옆에서 엘리먼트의 스타일을 지정하는 것을 권유한다.</p>]]></content><author><name>Sol Kim</name></author><summary type="html"><![CDATA[REACT 소개 ###MVC 아키텍처에서의 ‘V’  리액트는 앱 개발의 모든 사항을 완전히 책임져주는 프레임워크가 아니다. 그 대신 리액트는 비주얼한 요소와 그 상태를 최신으로 유지하는 데 중점을 두는 뷰VIEW 레이어에서 작동한다. 이는 MVC 아키텍처에서 M과 C에 해당하는 부분은 무엇이든 원하는 대로 자유롭게 사용할 수 있다는 의미다. 이런 유연성 덕분에 이미 익숙한 어떤 기술이든 채택할 수 있으며, 또한 새로운 웹앱 개발뿐만 아니라 엄청난 코드 수정 없이도 기존 앱을 개선하는 데 리액트가 유용할 수 있다. ###번개같이 바른 DOM 조작  DOM은 정말 느리기 때문에 리액트를 사용할 때 직접 DOM을 조작하지 않는다. 그 대신 리액트는 메모리상의, 즉 인메미로 가상 DOM(IN-MEMORY VIRTURAL DOM)을 만들어 조작한다. #리액트 시작하기 1.JSX 다루기  리액트는 우리가 써봤을 다른 자바스크립트 라이브러리와는 다르다. 스크립트 태그에서 코드를 작성하고 참조해야하는 건 즐거운 일이 아니지만 리액트는 그런 방법을 채용했다.  웹앱을 리액트로 만들든, AngularJS나 KnockOUT, jQuery 등으로 만들든 관계없다. 최종 결과가 반드시 HTML, CSS JS의 조합이어야 한다는 점이 중요하다. 그렇지 않으면 브라우저는 뭘 해야 하는지 알지 못하기 때문이다. jsx를 사용하면 쉽게 js와 html 태그를 합쳐 사용자 인터페이스의 요소와 기능을 정의할 수 있다. 그러나 미묘한 문제가 하나 있다. 브라우저가 JSX에 대해 모른다는 사실이다. 리액트를 사용해 웹앱을 만들 때는 JSX를 브라우저가 이해할 수 있는 평범한 자바스크립트로 변환시킬 방법이 필요하다. 그 방법으로 노드와 그 외 빌드 툴 등으로 구성된 개발 환경을 구축한다. 이 경우, 빌드를 수행할 대마다 JSX의 모든 사항이 자동으로 JS로 변환되며, 다른 일반적인 JS 파일처럼 참조할 수 있도록 파일이 디스크에 저장된다. JSX를 자동 변환하는 JS라이브러리를 사용한다. 이 경우 다른 자바스크립트의 경우처럼 JSX를 직접 지정하면 되고, 나머지는 브라우저가 알아서 처리한다. ###요약 리액트는 JSX라는 새로운 언어를 사용해 비주얼을 정의한다는 측면에서 다른 라이브러리와 차별된다. #리액트 컴포넌트 ##함수 개념적으로 자바스크립 함수는 리액트 컴포넌트와 많은부분을 표면적으로 공유하며, 또한 컴포넌트가 어떤 일을 하는지 가장 수베기 이해할 수 있는 방법이다. 함수는 코드를 더 명확하고 재사용 가능하도록 만든다. 함수와 마찬가지로 컴포넌트에도 인자를 전달해 그에 맞게 동작하도록 할 수 있다.용어가 약간 다른데, 함수 세계에서 인자라고 불렀던 것을 컴포넌트 세계에서는 속성 property라고 한다. #리액트 스타일링 리액트의 핵심아이디어 중 하나는 앱의 비주얼 부품은 독립적이며 재사용 가능해야 한다는 점이다. 그게 html 엘리먼트와 자바스크립트를 컴포넌트라는 한 통에 담았던 이유이다.독립적인 ui 컴포넌트가 되기 위해 리액트는 html과 자바스크립트 바로 옆에서 엘리먼트의 스타일을 지정하는 것을 권유한다.]]></summary></entry><entry><title type="html">명령어 프롬포트 Linux Windows</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/2022/02/14/%EB%AA%85%EB%A0%B9%EC%96%B4-%ED%94%84%EB%A1%AC%ED%8F%AC%ED%8A%B8-linux-windows.html" rel="alternate" type="text/html" title="명령어 프롬포트 Linux Windows" /><published>2022-02-14T00:00:00+00:00</published><updated>2022-02-14T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/2022/02/14/%EB%AA%85%EB%A0%B9%EC%96%B4-%ED%94%84%EB%A1%AC%ED%8F%AC%ED%8A%B8-linux-windows</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/2022/02/14/%EB%AA%85%EB%A0%B9%EC%96%B4-%ED%94%84%EB%A1%AC%ED%8F%AC%ED%8A%B8-linux-windows.html"><![CDATA[<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">column</th>
+      <th style="text-align: center">column</th>
+      <th style="text-align: center">column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">현재 경로 위치</td>
+      <td style="text-align: center">pwd</td>
+      <td style="text-align: center">cd</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">디렉터리 이동</td>
+      <td style="text-align: center">cd [path]</td>
+      <td style="text-align: center">cd [path]</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">목록 표시</td>
+      <td style="text-align: center">ls</td>
+      <td style="text-align: center">dir</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">터미널 초기화</td>
+      <td style="text-align: center">clear</td>
+      <td style="text-align: center">cls</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Sol Kim</name></author><summary type="html"><![CDATA[column column column 현재 경로 위치 pwd cd 디렉터리 이동 cd [path] cd [path] 목록 표시 ls dir 터미널 초기화 clear cls]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/jekyll/2018/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-12-07T00:00:00+00:00</published><updated>2018-12-07T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/jekyll/2018/12/07/welcome-to-jekyll</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/jekyll/2018/12/07/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<h2 id="section-1">section 1</h2>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<h2 id="section-2">section 2</h2>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+<p>$ a * b = c ^ b $</p>
+
+<p>$ 2^{\frac{n-1}{3}} $</p>
+
+<p>$ \int_a^b f(x)\,dx. $</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello World!"</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// prints 'Hi, Tom' to STDOUT.</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"John"</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div></div>]]></content><author><name>Jeffrey</name></author><category term="jekyll" /><category term="jekyll" /><category term="theme" /><category term="yat" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">An exhibit of Markdown</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/markdown/2018/12/05/an-exhibit-of-markdown.html" rel="alternate" type="text/html" title="An exhibit of Markdown" /><published>2018-12-05T00:00:00+00:00</published><updated>2018-12-05T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/markdown/2018/12/05/an-exhibit-of-markdown</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/markdown/2018/12/05/an-exhibit-of-markdown.html"><![CDATA[<p>This note demonstrates some of what <a href="http://daringfireball.net/projects/markdown/">Markdown</a> is capable of doing.</p>
+
+<h2 id="an-exhibit-of-markdown">An exhibit of Markdown</h2>
+
+<p><em>Note: Feel free to play with this page. Unlike regular notes, this doesn’t automatically save itself.</em></p>
+
+<h2 id="basic-formatting">Basic formatting</h2>
+
+<p>Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</p>
+
+<p>Paragraphs must be separated by a blank line. Basic formatting of <em>italics</em> and <strong>bold</strong> is supported. This <em>can be <strong>nested</strong> like</em> so.</p>
+
+<h2 id="lists">Lists</h2>
+
+<h3 id="ordered-list">Ordered list</h3>
+
+<ol>
+  <li>Item 1</li>
+  <li>A second item</li>
+  <li>Number 3</li>
+  <li>Ⅳ</li>
+</ol>
+
+<p><em>Note: the fourth item uses the Unicode character for <a href="http://www.fileformat.info/info/unicode/char/2163/index.htm">Roman numeral four</a>.</em></p>
+
+<h3 id="unordered-list">Unordered list</h3>
+
+<ul>
+  <li>An item</li>
+  <li>Another item</li>
+  <li>Yet another item</li>
+  <li>And there’s more…</li>
+</ul>
+
+<h2 id="paragraph-modifiers">Paragraph modifiers</h2>
+
+<h3 id="code-block">Code block</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Code blocks are very useful for developers and other people who look at code or other things that are written in plain text. As you can see, it uses a fixed-width font.
+</code></pre></div></div>
+
+<p>You can also make <code class="language-plaintext highlighter-rouge">inline code</code> to add code into other things.</p>
+
+<h3 id="quote">Quote</h3>
+
+<blockquote>
+  <p>Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.</p>
+</blockquote>
+
+<h2 id="headings">Headings</h2>
+
+<p>There are six levels of headings. They correspond with the six levels of HTML headings. You’ve probably noticed them already in the page. Each level down uses one more hash character.</p>
+
+<h3 id="headings-can-also-contain-formatting">Headings <em>can</em> also contain <strong>formatting</strong></h3>
+
+<h3 id="they-can-even-contain-inline-code">They can even contain <code class="language-plaintext highlighter-rouge">inline code</code></h3>
+
+<p>Of course, demonstrating what headings look like messes up the structure of the page.</p>
+
+<p>I don’t recommend using more than three or four levels of headings here, because, when you’re smallest heading isn’t too small, and you’re largest heading isn’t too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.</p>
+
+<h2 id="urls">URLs</h2>
+
+<p>URLs can be made in a handful of ways:</p>
+
+<ul>
+  <li>A named link to <a href="http://www.markitdown.net/">MarkItDown</a>. The easiest way to do these is to select what you want to make a link and hit <code class="language-plaintext highlighter-rouge">Ctrl+L</code>.</li>
+  <li>Another named link to <a href="http://www.markitdown.net/">MarkItDown</a></li>
+  <li>Sometimes you just want a URL like <a href="http://www.markitdown.net/">http://www.markitdown.net/</a>.</li>
+</ul>
+
+<h2 id="horizontal-rule">Horizontal rule</h2>
+
+<p>A horizontal rule is a line that goes across the middle of the page.</p>
+
+<hr />
+
+<p>It’s sometimes handy for breaking things up.</p>
+
+<h2 id="images">Images</h2>
+
+<p>Markdown can also contain images. I’ll need to add something here sometime.</p>
+
+<h2 id="finally">Finally</h2>
+
+<p>There’s actually a lot more to Markdown than this. See the official <a href="http://daringfireball.net/projects/markdown/basics">introduction</a> and <a href="http://daringfireball.net/projects/markdown/syntax">syntax</a> for more information. However, be aware that this is not using the official implementation, and this might work subtly differently in some of the little things.</p>]]></content><author><name>Sol Kim</name></author><category term="markdown" /><category term="example" /><category term="markdown" /><summary type="html"><![CDATA[This note demonstrates some of what Markdown is capable of doing.]]></summary></entry><entry><title type="html">Mathjax Test</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/markdown/2018/05/26/mathjax-test.html" rel="alternate" type="text/html" title="Mathjax Test" /><published>2018-05-26T00:00:00+00:00</published><updated>2018-05-26T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/markdown/2018/05/26/mathjax-test</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/markdown/2018/05/26/mathjax-test.html"><![CDATA[<ul>
+  <li>A safe integer is an integer that
+    <ul>
+      <li>can be exactly represented as an IEEE-754 double precision number, and</li>
+      <li>whose IEEE-75 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation</li>
+    </ul>
+  </li>
+  <li>For example, $ 2 ^ {53} - 1 $ is a safe integer,
+    <ul>
+      <li>it can be exactly represented</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Sol Kim</name></author><category term="markdown" /><category term="test" /><summary type="html"><![CDATA[A safe integer is an integer that can be exactly represented as an IEEE-754 double precision number, and whose IEEE-75 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation For example, $ 2 ^ {53} - 1 $ is a safe integer, it can be exactly represented]]></summary></entry><entry><title type="html">Video example</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/example/2017/12/18/video-example.html" rel="alternate" type="text/html" title="Video example" /><published>2017-12-18T00:00:00+00:00</published><updated>2017-12-18T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/example/2017/12/18/video-example</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/example/2017/12/18/video-example.html"><![CDATA[<h2 id="canon-in-d-pachelbels-canon---cello--piano-best-wedding-version">Canon in D (Pachelbel’s Canon) - Cello &amp; Piano [BEST WEDDING VERSION]</h2>
+<p>Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make our own! We tried to stick as closely to the original as possible (which was written for three violins and basso continuo), and we performed it <em>not</em> at a snail’s pace so the bride can actually make it down the aisle without putting everyone to sleep. 🙊(Yeah, we said it! Nobody likes a slow processional!) Also, the number one complaint about this piece from cellists is always how booooring it is to play because they literally have to play the same 8 bass notes over and over for the entire piece. Problem solved with this arrangement because the cello never has to play the bass! 🙌(The piano does, but we get lots of other fun stuff too so it’s ok!) So for all you musicians out there playing weddings, we hope you enjoy playing this arrangement a little more than the ones you were used to…You can get it from www.musicnotes.com. 😊Be sure to let us know in the comments if you do!</p>
+
+<p><img src="//www.youtube.com/watch?v=Ptk_1Dc2iPY" alt="" /></p>
+
+<h2 id="gucci-hallucination--the-line-animation--gucci">GUCCI HALLUCINATION / THE LINE ANIMATION / GUCCI</h2>
+<p>BACKGROUND /</p>
+
+<p>Gucci share their creative vision through a series of surreal animated paintings by acclaimed artist Ignasi Monreal and The Line Animation studio. The animations make up part of a larger campaign shared via social media, above the line and print.</p>
+
+<p>APPROACH /</p>
+
+<p>Our aim was to ground and accentuate the outlandish scenarios with ambient sound design. Neither proclaiming to be positive or negative, the sound conveys a sense of the uncanny and leaves the audience with nothing but their own interpretations. their creative vision through a series of surreal animated paintings by acclaimed artist Ignasi Monreal and The Line Animation studio. The animations make up part of a larger campaign shared via social media, above the line and print.</p>
+
+<p><img src="https://vimeo.com/263856289" alt="" /></p>
+
+<h2 id="finneas-demos-how-he-builds-songs-for-billie-eilish">FINNEAS Demos How He Builds Songs For Billie Eilish</h2>
+<p>Grammy Award-winning musician and producer FINNEAS sits down with Pitchfork and closely examines his creative process while working on some of the biggest hit songs of the past couple years. FINNEAS explores the sounds that brought upon 
+some of his greatest musical breakthroughs in songs such as bad guy, bury a friend, ocean eyes, when the party’s over, I Lost a Friend, Used to This and much more.</p>
+
+<p><img src="https://dai.ly/x7tgcev" alt="" /></p>
+
+<h2 id="2019-bmw-vision-m-next-concept-hd">2019 BMW Vision M NEXT Concept (HD)</h2>
+
+<p>In future, drivers will be able to choose whether they wish to be driven or do the driving themselves. With the BMW Vision M NEXT, the BMW Group is revealing its take on how driving pleasure might look in future. It offers a foretaste of the BMW M brand’s electrified future by placing the focus squarely on the actively engaged driver. Intelligent technologies provide comprehensive yet carefully targeted assistance to turn them into the ultimate driver.</p>
+
+<p><img src="https://www.dailymotion.com/video/x7bur2y" alt="" /></p>
+
+<h2 id="this-is-the-poster-image">This is the poster image</h2>
+<p>In modern browsers, adding a video to your page is as easy as adding an image. No longer do you need to deal with special plug-ins or require crazy markup, you can do it with a single element.
+<img src="//www.html5rocks.com/en/tutorials/video/basics/devstories.webm" alt="video" /></p>]]></content><author><name>Sol Kim</name></author><category term="example" /><category term="video" /><summary type="html"><![CDATA[Canon in D (Pachelbel’s Canon) - Cello &amp; Piano [BEST WEDDING VERSION] Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make our own! We tried to stick as closely to the original as possible (which was written for three violins and basso continuo), and we performed it not at a snail’s pace so the bride can actually make it down the aisle without putting everyone to sleep. 🙊(Yeah, we said it! Nobody likes a slow processional!) Also, the number one complaint about this piece from cellists is always how booooring it is to play because they literally have to play the same 8 bass notes over and over for the entire piece. Problem solved with this arrangement because the cello never has to play the bass! 🙌(The piano does, but we get lots of other fun stuff too so it’s ok!) So for all you musicians out there playing weddings, we hope you enjoy playing this arrangement a little more than the ones you were used to…You can get it from www.musicnotes.com. 😊Be sure to let us know in the comments if you do!]]></summary></entry><entry><title type="html">Table example</title><link href="https://kimsoldev.github.io//jekyll-theme-yat/example/2017/12/15/table-example.html" rel="alternate" type="text/html" title="Table example" /><published>2017-12-15T00:00:00+00:00</published><updated>2017-12-15T00:00:00+00:00</updated><id>https://kimsoldev.github.io//jekyll-theme-yat/example/2017/12/15/table-example</id><content type="html" xml:base="https://kimsoldev.github.io//jekyll-theme-yat/example/2017/12/15/table-example.html"><![CDATA[<h2 id="table-example-as-below">Table example as below</h2>
+
+<p><strong>For now, these extended features are provided:</strong></p>
+
+<ul>
+  <li>Cells spanning multiple columns</li>
+  <li>Cells spanning multiple rows</li>
+  <li>Cells text align separately</li>
+  <li>Table header not required</li>
+  <li>Grouped table header rows or data rows</li>
+</ul>
+
+<h3 id="rowspan-and-colspan">Rowspan and Colspan</h3>
+<p>^^ in a cell indicates it should be merged with the cell above.<br />
+This feature is contributed by <a href="https://github.com/pmccloghrylaing">pmccloghrylaing</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Stage</th>
+      <th style="text-align: right">Direct Products</th>
+      <th style="text-align: right">ATP Yields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">Glycolysis</td>
+      <td style="text-align: right">2 ATP                   |</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">2 NADH</td>
+      <td style="text-align: right">3–5 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Pyruvaye oxidation</td>
+      <td style="text-align: right">2 NADH</td>
+      <td style="text-align: right">5 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Citric acid cycle</td>
+      <td style="text-align: right">2 ATP           |</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">6 NADH</td>
+      <td style="text-align: right">15 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">2 FADH</td>
+      <td style="text-align: right">3 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">30–32 ATP                         ||</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>[ Net ATP yields per hexose]</p>
+
+<h3 id="multiline">Multiline</h3>
+<p>A backslash at end to join cell contents with the following lines.<br />
+This feature is contributed by <a href="https://github.com/Lucas-C">Lucas-C</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">:     Easy Multiline     :||</th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange  \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange  \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange  \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="headerless">Headerless</h3>
+<p>Table header can be eliminated.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>♜</td>
+      <td> </td>
+      <td>♝</td>
+      <td>♛</td>
+      <td>♚</td>
+      <td>♝</td>
+      <td>♞</td>
+      <td>♜</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>♟</td>
+      <td>♟</td>
+      <td>♟</td>
+      <td> </td>
+      <td>♟</td>
+      <td>♟</td>
+      <td>♟</td>
+    </tr>
+    <tr>
+      <td>♟</td>
+      <td> </td>
+      <td>♞</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>♗</td>
+      <td> </td>
+      <td> </td>
+      <td>♟</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>♙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>♘</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+      <td> </td>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+    </tr>
+    <tr>
+      <td>♖</td>
+      <td>♘</td>
+      <td>♗</td>
+      <td>♕</td>
+      <td>♔</td>
+      <td> </td>
+      <td> </td>
+      <td>♖</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|:     Fruits <span class="se">\|\|</span> Food           :|||
+|:-------- |:-------- |:------------ |
+| Apple    |: Apple  :|    Apple     <span class="err">\</span>
+| Banana   |  Banana  |    Banana    <span class="err">\</span>
+| Orange   |  Orange  |    Orange    |
+|:   Rowspan is 5   :||:  How's it? :|
+|^^   A. Peach       ||^^ 1. Fine    |
+|^^   B. Orange      ||^^ 2. Bad  $I = <span class="se">\i</span>nt <span class="se">\r</span>ho R^{2} dV$     |
+|^^   C. Banana      ||   It's OK! !<span class="p">[</span><span class="nv">example image</span><span class="p">][</span><span class="ss">my-image</span><span class="p">]</span>  |
+</code></pre></div></div>
+
+<h3 id="text-alignment">Text Alignment</h3>
+<p>Table cell can be set alignment separately.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">\:Fruits         |</th>
+      <th style="text-align: left">Food   :</th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Fruits\::        |</th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">: \:Fruits       :|</th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">:       Food     :|</th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+      <td style="text-align: left">:   Strawberry    :</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple  &amp;  Banana |</td>
+      <td style="text-align: left">^^</td>
+      <td style="text-align: left">Peach        :|</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>: \:Fruits       :|</td>
+      <td> </td>
+      <td>:       Food     :|</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>Banana</td>
+      <td>Orange</td>
+      <td>:   Strawberry    :</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">:     Fruits || Food           :||</th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">: Apple  :</td>
+      <td style="text-align: left">Apple     \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Banana    \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Orange</td>
+      <td style="text-align: left">Orange</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">:   Rowspan is 5   :|</td>
+      <td style="text-align: left">:  How’s it? :</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">^^   A. Peach       |</td>
+      <td style="text-align: left">^^ 1. Fine</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">^^   B. Orange      |</td>
+      <td style="text-align: left">^^ 2. Bad  $I = \int \rho R^{2} dV$</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">^^   C. Banana      |</td>
+      <td style="text-align: left">It’s OK! ![example image](http://www.unexpected-vortices.com/sw/rippledoc/example-image.jpg "An exemplary image")</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Sol Kim</name></author><category term="example" /><category term="table" /><summary type="html"><![CDATA[Table example as below]]></summary></entry></feed>
